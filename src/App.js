@@ -1,22 +1,18 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import styles from './App.css';
-
-const background = ['https://api.memegen.link/templates/'];
+import './App.css';
+import React, { useState } from 'react';
 
 function App() {
   const [top, setTop] = useState('');
   const [bottom, setBottom] = useState('');
   const [template, setTemplate] = useState('');
-  // const [data, setData] = useState(null);
+  const memeUrl = `https://api.memegen.link/images/${template}/${top}/${bottom}.jpg`;
 
   return (
     <div>
-      <h3>Meme Text Input</h3>
+      <h1>Meme Generator</h1>
       <label>
         Top text
         <br />
-        {/* Controlled Component */}
         <input
           value={top}
           onChange={(event) => {
@@ -31,7 +27,6 @@ function App() {
       <label>
         Bottom text
         <br />
-        {/* Controlled Component */}
         <input
           value={bottom}
           onChange={(event) => {
@@ -41,19 +36,13 @@ function App() {
       </label>
       <br />
       <br />
-
+      <img src={memeUrl} alt="meme" data-test-id="meme-image" />
       <br />
-
-      <article className={styles.article}>
-        <img className={styles.image} src={background} alt="background" />
-        <h1 className={styles.header}>React Is something</h1>
-      </article>
 
       <label>
         <br />
         Meme template
         <br />
-        {/* Controlled Component */}
         <input
           value={template}
           onChange={(event) => {
