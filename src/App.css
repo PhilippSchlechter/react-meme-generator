@@ -6,10 +6,10 @@ div {
 }
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  margin: 80px;
+  margin: 60px;
 }
 body {
-  background-color: #d3dbe0;
+  background-color: #d8e6ef;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -20,6 +20,18 @@ img {
 }
 
 input {
-  margin: 10px;
-  border: 1px solid black;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+label {
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn {
+  margin: 20px;
+  background-color: azure;
+  width: 80px;
+  height: 40px;
+  border-radius: 4px;
 }
