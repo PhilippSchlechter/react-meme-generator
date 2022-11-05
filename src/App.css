@@ -6,22 +6,22 @@ div {
 }
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  margin: 60px;
+  margin: 30px;
 }
 body {
-  background-color: #d8e6ef;
+  background-color: #e5eff5;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 img {
   border-radius: 15px;
-  border: 2px solid black;
-  margin: 40px;
+  border: 2px solid rgb(58, 57, 57);
+  margin: 20px;
 }
 
 input {
-  margin: 5px;
-  border: 2px solid black;
+  margin: 4px;
+  border: 2px solid rgb(99, 96, 96);
   border-radius: 4px;
 }
 label {
@@ -29,9 +29,22 @@ label {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .btn {
-  margin: 20px;
-  background-color: azure;
+  margin: 10px;
+  background-color: rgb(243, 249, 249);
   width: 80px;
   height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(99, 96, 96);
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 320px;
+  width: 370px;
+}
+.templateSelector {
+  margin: 4px;
+  border: 2px solid rgb(99, 96, 96);
   border-radius: 4px;
 }
