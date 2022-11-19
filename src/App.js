@@ -19,15 +19,9 @@ function App() {
       })
       .then((res) => {
         fileDownload(res.data, `meme_${template}.jpg`);
+        setTopMemeText('');
+        setBottomMemeText('');
       });
-  };
-  const handleClickBottom = () => {
-    // clear input value
-    setBottomMemeText('');
-  };
-  const handleClickTop = () => {
-    // clear input value
-    setTopMemeText('');
   };
 
   useEffect(() => {
@@ -36,12 +30,6 @@ function App() {
       .then((response) => setTemplates(response))
       .catch(() => alert('No template found.'));
   }, []);
-
-  // First version, but then decided to implement the select function
-
-  /* const handleChange = (event) => {
-    setTemplate(event.target.value);
-  };*/
 
   return (
     <div>
@@ -62,7 +50,6 @@ function App() {
         <br />
         <input
           value={topMemeText}
-          onClick={handleClickTop}
           onChange={(event) => {
             setTopMemeText(event.currentTarget.value);
           }}
@@ -76,7 +63,6 @@ function App() {
         <br />
         <input
           value={bottomMemeText}
-          onClick={handleClickBottom}
           onChange={(event) => {
             setBottomMemeText(event.currentTarget.value);
           }}
@@ -100,14 +86,6 @@ function App() {
             </option>
           ))}
         </select>
-        {/* <form>
-          <input
-            value={template}
-            onChange={handleChange}
-            onClick={handleClick}
-
-          />
-        </form> */}
       </label>
 
       <br />
